@@ -13,15 +13,24 @@
 type_hierarchy
 bot
   feat_struc
-    syn_struc head:pos subcat:list
+    syn_struc head:pos mod:list subcat:list
       phrase dtrs:list
       word
     pos
-      noun
       verb
-      det
       prep
-      adj
+      pos_agr agr:agr
+        noun
+        det
+        adj
+    agr num:num gender:gender
+  num
+   sg
+   pl
+  gender
+   masc
+   fem
+   neut
   list
     e_list
     ne_list hd:bot tl:list
