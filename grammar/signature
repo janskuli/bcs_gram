@@ -1,0 +1,28 @@
+% -*-trale-prolog-*-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%   $RCSfile: signature,v $
+%%  $Revision: 1.2 $
+%%      $Date: 2005/10/20 08:17:02 $
+%%     Author: Stefan Mueller (Stefan.Mueller@cl.uni-bremen.de)
+%%    Purpose: 
+%%   Language: Trale
+%      System: TRALE 2.3.7 under Sicstus 3.9.1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+type_hierarchy
+bot
+  feat_struc
+    syn_struc head:pos subcat:list
+      phrase dtrs:list
+      word
+    pos
+      noun
+      verb
+      det
+      prep
+      adj
+  list
+    e_list
+    ne_list hd:bot tl:list
+.
