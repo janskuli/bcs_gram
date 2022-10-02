@@ -14,74 +14,24 @@ das ---> (word,
   head:det,
   subcat:[] ).
 
-der ---> (word,
-  head:det,
-  subcat:[] ).
+vladika ---> (word,
+  head:(noun,
+        agr:(Agr,
+        gender:masc)),
+  subcat:[]).
 
-dem ---> (word,
-  head:det,
-  subcat:[] ).
+stari ---> (word,
+  head:(adj,
+        agr:(Agr,gender:masc)),
+  mod:[(head:(noun,agr:Agr))],
+  subcat:[]).
 
-den ---> (word,
-  head:det,
-  subcat:[] ).
-
-die ---> (word,
-  head:det,
-  subcat:[] ).
-
-alle ---> (word,
-  head:det,
-  subcat:[] ).
-
-allen ---> (word,
-  head:det,
-  subcat:[] ).
-
-aller ---> (word,
-  head:det,
-  subcat:[] ).
-
-hund ---> (word,
-  head:noun,
-  subcat:[(head:det) ] ).
-
-hunde ---> (word,
-  head:noun,
-  subcat:[(head:det) ]  ).
-
-katze ---> (word,
-  head:noun,
-  subcat:[(head:det) ] ).
-
-schaf ---> (word,
-  head:noun,
-  subcat:[(head:det) ] ).
+stara ---> (word,
+  head:(adj,
+        agr:(Agr,gender:fem)),
+  mod:[(head:(noun,agr:Agr))],
+  subcat:[]).
 
 bellt ---> (word,
   head:verb,
   subcat:[(head:noun, subcat:[]) ] ).
-
-bellen ---> (word,
-  head:verb,
-  subcat:[ (head:noun, subcat:[])] ).
-
-jagt ---> (word,
-  head:verb,
-  subcat:[ (head:noun, subcat:[]), (head:noun, subcat:[]) ] ).
-
-kennt ---> (word,
-  head:verb,
-  subcat:[ (head:noun, subcat:[]), (head:noun, subcat:[]) ] ).
-
-gibt ---> (word,
-  head:verb,
-  subcat:[ (head:noun, subcat:[]), (head:noun, subcat:[]), (head:noun, subcat:[]) ] ).
-
-erinnert ---> (word,
-  head:verb,
-  subcat:[ (head:noun, subcat:[]), (head:noun, subcat:[]), (head:prep, subcat:[]) ] ).
-
-an ---> (word,
-  head:prep,
-  subcat: [ (head:noun, subcat:[])]).

@@ -25,3 +25,12 @@ arg_h rule
 cat> NonheadDtr,
 cat> (head:Head,
       subcat:[NonheadDtr|Subcat]).
+
+ajd_h rule
+(head:Head,
+ subcat:Subcat)
+  ===>
+cat> (head:NonheadDtr,mod:[HeadDtr],subcat:[]),
+cat> (HeadDtr,
+      head:Head,
+      subcat:Subcat).
