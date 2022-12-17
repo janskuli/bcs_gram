@@ -9,23 +9,8 @@ In order to run the grammar the TRALE system needs to installed. The following i
 
 ## Installation
 
-Download the standalone verions and extract it:
-```console
-wget https://hpsg.hu-berlin.de/Software/Trale/standalone-trale.tbz
-tar -xvjf standalone-trale.tbz
-```
-The files in ``standalone-trale`` have to be made executable:
+For installing the TRALE system just run:
 
 ```console
-chmod +x ~/standalone-trale/gralej/gralej
-chmod +x ~/standalone-trale/trale
-chmod +x  ~/standalone-trale/standalone-trale.Linux
-chmod +x ~/standalone-trale/standalone-trale-tsdb.Linux
-```
-
-Finaly create symbolic links:
-
-```console
-sudo ln -s ~/standalone-trale/trale \bin\trale
-sudo ln -s ~/standalone-trale/gralej/gralej grisu
+$ sh install.sh
 ```
