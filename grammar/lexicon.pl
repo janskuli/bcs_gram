@@ -10,28 +10,86 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-das ---> (word,
-  head:det,
-  subcat:[] ).
+
+% NOUNS
 
 vladika ---> (word,
   head:(noun,
         agr:(Agr,
-        gender:masc)),
+        gender:masc,
+        num:sg)),
+  spr:[],
   subcat:[]).
+
+vladike ---> (word,
+  head:(noun,
+        agr:(Agr,
+             gender:fem,
+             num:pl),
+        sem:(gender:masc,
+             num:pl)),
+  spr:[(head:(det,agr:Agr))],
+  subcat:[]).
+
+vladike ---> (word,
+  head:(noun,
+        agr:(
+            gender:fem,
+            num:pl),
+        sem:(
+             gender:(Gen,masc),
+             num:(Num,pl))),
+  spr:[(head:(det,agr:(num:Num,gender:Gen)))],
+  subcat:[]).
+
+% ADJECTIVES
 
 stari ---> (word,
   head:(adj,
-        agr:(Agr,gender:masc)),
-  mod:[(head:(noun,agr:Agr))],
+        agr:(Agr,
+             gender:masc,
+             num:sg),
+  mod:[(head:(noun,agr:Agr))]),
+  spr:[],
   subcat:[]).
 
 stara ---> (word,
   head:(adj,
-        agr:(Agr,gender:fem)),
-  mod:[(head:(noun,agr:Agr))],
+        agr:(Agr,
+             gender:fem,
+             num:sg),
+  mod:[(head:(noun,agr:Agr))]),
+  spr:[],
   subcat:[]).
 
-bellt ---> (word,
-  head:verb,
-  subcat:[(head:noun, subcat:[]) ] ).
+stare ---> (word,
+  head :(adj,
+         agr:(Agr,
+              num:pl,
+              gender:fem),
+  mod:[(head:(noun,agr:Agr))]),
+  spr:[],
+  subcat:[]).
+
+stari ---> (word,
+  head:(adj,
+        agr:(
+             gender:(Gen,masc),
+             num:(Num,pl)),
+  mod:[(head:(noun,sem:(gender:Gen,num:Num)))]),
+  spr:[],
+  subcat:[]).
+
+oni ---> (word,
+  head:(det,
+        agr:(gender:masc,
+             num:pl),
+  mod: []),
+  subcat:[]).
+
+one ---> (word,
+  head:(det,
+        agr:(gender:fem,
+             num:pl),
+  mod: []),
+  subcat:[]).
