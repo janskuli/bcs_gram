@@ -26,11 +26,24 @@ cat> NonheadDtr,
 cat> (head:Head,
       subcat:[NonheadDtr|Subcat]).
 
-ajd_h rule
+adj_h rule
 (head:Head,
- subcat:Subcat)
+ subcat:Subcat,
+ spr:Spr)
   ===>
-cat> (head:NonheadDtr,mod:[HeadDtr],subcat:[]),
+cat> (head:(NonheadDtr,mod:[HeadDtr]),subcat:[]),
 cat> (HeadDtr,
       head:Head,
+      spr:Spr,
+      subcat:Subcat).
+
+spr_h rule
+(spr:Spr,
+ head:Head,
+ subcat:Subcat)
+   ===>
+cat> NonHeadDtr,
+cat> (HeadDtr,
+      head:Head,
+      spr:[NonHeadDtr|Spr],
       subcat:Subcat).
