@@ -15,19 +15,22 @@
 
 vladika ---> (word,
   head:(noun,
-        agr:(Agr,
-        gender:masc,
-        num:sg)),
+        agr:(gender:Gen,
+             num:Num)),
   spr:[],
+  sem:index:(object,
+            gender:(Gen,masc),
+            num:(Num,sg)),
   subcat:[]).
 
 vladike ---> (word,
   head:(noun,
         agr:(Agr,
              gender:fem,
-             num:pl),
-        sem:(gender:masc,
              num:pl)),
+  sem:index:(object,
+             gender:masc,
+             num:pl),
   spr:[(head:(det,agr:Agr))],
   subcat:[]).
 
@@ -35,10 +38,10 @@ vladike ---> (word,
   head:(noun,
         agr:(
             gender:fem,
-            num:pl),
-        sem:(
+            num:pl)),
+  sem:index:(object,
              gender:(Gen,masc),
-             num:(Num,pl))),
+             num:(Num,pl)),
   spr:[(head:(det,agr:(num:Num,gender:Gen)))],
   subcat:[]).
 
@@ -50,6 +53,15 @@ stari ---> (word,
              gender:masc,
              num:sg),
   mod:[(head:(noun,agr:Agr))]),
+  spr:[],
+  subcat:[]).
+
+stari ---> (word,
+  head:(adj,
+        agr:(
+             gender:(Gen,masc),
+             num:(Num,pl)),
+  mod:[(head:noun,sem:index:(object,gender:Gen,num:Num))]),
   spr:[],
   subcat:[]).
 
@@ -68,15 +80,6 @@ stare ---> (word,
               num:pl,
               gender:fem),
   mod:[(head:(noun,agr:Agr))]),
-  spr:[],
-  subcat:[]).
-
-stari ---> (word,
-  head:(adj,
-        agr:(
-             gender:(Gen,masc),
-             num:(Num,pl)),
-  mod:[(head:(noun,sem:(gender:Gen,num:Num)))]),
   spr:[],
   subcat:[]).
 

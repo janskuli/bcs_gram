@@ -13,27 +13,33 @@
 type_hierarchy
 bot
   feat_struc
-    syn_struc phon:list head:pos spr:list subcat:list
+    syn_struc phon:list head:pos spr:list subcat:list sem:semantics
       syntactic_object
         phrase dtrs:list
       word
     pos mod:list
       verb
       prep
-      pos_agr agr:agr sem:sem
+      agr_pos agr:agr
         noun
         det
         adj
-    sem_agr num:num gender:gender
-     agr 
-     sem
+    agr num:num gender:gender
+      &object
+    semantics index:index key:relation rels:list
+    relation pred:(a_ _) arg0:index
+      arg1_relation arg1:index
+        arg1_2_relation arg2:index
+          arg1_2_3_relation arg3:index
   num
-   sg
-   pl
+    sg
+    pl
   gender
-   masc
-   fem
-   neut
+    masc
+    fem
+    neut
+  index
+    object
   list
     e_list
     ne_list hd:bot tl:list
