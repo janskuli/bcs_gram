@@ -1,49 +1,46 @@
 % -*-trale-prolog-*-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%   $RCSfile: rules.pl,v $
-%%  $Revision: 1.4 $
-%%      $Date: 2005/10/20 08:17:02 $
+%%  $Revision: 1.2 $
+%%      $Date: 2005/12/21 15:27:09 $
 %%     Author: Stefan Mueller (Stefan.Mueller@cl.uni-bremen.de)
-%%    Purpose: 
+%%    Purpose: Eine kleine Spielzeuggrammatik für die Lehre
 %%   Language: Trale
-%      System: TRALE 2.3.7 under Sicstus 3.9.1
+%      System: TRALE 2.7.5 (release ) under Sicstus 3.10.1
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-h_arg rule
-(head:Head,
- subcat:Subcat)
+h_arg ## @h_arg((HeadDtr,
+		 head:initial:plus),NonHeadDtr)
   ===>
-cat> (head:Head,
-      subcat:[NonheadDtr|Subcat]),
-cat> NonheadDtr.
+cat> HeadDtr,
+cat> NonHeadDtr.
 
-arg_h rule
-(head:Head,
- subcat:Subcat)
+arg_h ## @h_arg((HeadDtr,
+		 head:initial:minus),NonHeadDtr)
   ===>
-cat> NonheadDtr,
-cat> (head:Head,
-      subcat:[NonheadDtr|Subcat]).
-
-adj_h rule
-(head:Head,
- subcat:Subcat,
- spr:Spr)
-  ===>
-cat> (head:(NonheadDtr,mod:[HeadDtr]),subcat:[]),
-cat> (HeadDtr,
-      head:Head,
-      spr:Spr,
-      subcat:Subcat).
-
-spr_h rule
-(spr:Spr,
- head:Head,
- subcat:Subcat)
-   ===>
 cat> NonHeadDtr,
-cat> (HeadDtr,
-      head:Head,
-      spr:[NonHeadDtr|Spr],
-      subcat:Subcat).
+cat> HeadDtr.
+
+
+h_adj ## @h_adj(HeadDtr,(NonHeadDtr,
+			 head:pre_modifier:minus))
+  ===>
+cat> HeadDtr,
+cat> NonHeadDtr.
+
+adj_h ## @h_adj(HeadDtr,(NonHeadDtr,
+			 head:pre_modifier:plus))
+  ===>
+cat> NonHeadDtr,
+cat> HeadDtr.
+
+
+%h_spr ## @h_spr(HeadDtr,NonHeadDtr)
+%  ===>
+%cat> HeadDtr,
+%cat> NonHeadDtr.
+
+spr_h ## @h_spr(HeadDtr,NonHeadDtr)
+  ===>
+cat> NonHeadDtr,
+cat> HeadDtr.
