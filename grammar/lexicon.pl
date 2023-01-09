@@ -4,92 +4,175 @@
 %%  $Revision: 1.2 $
 %%      $Date: 2005/10/20 08:17:02 $
 %%     Author: Stefan Mueller (Stefan.Mueller@cl.uni-bremen.de)
-%%    Purpose: 
+%%    Purpose:
 %%   Language: Trale
 %      System: TRALE 2.3.7 under Sicstus 3.9.1
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-
-% NOUNS
-
-vladika ---> (word,
+vladika ~~>
+ (word,
   head:(noun,
         agr:(Agr,
-        gender:masc,
-        num:sg)),
-  spr:[],
-  subcat:[]).
+             per:(Per,third),
+	         gen:(Gen,mas),
+             num:(Num,sg))),
+     spr:[(head:(det,
+                 agr:Agr),
+             sem:index:Ind)],
+     subcat:[],
+ sem:(index:(Ind,
+       object,
+       per:Per,
+       gen:Gen,
+       num:Num
+       ),
+       key:(Key,
+            pred:(a_ vladika_rel),
+            arg0:Ind),
+       rels:[Key])).
 
-vladike ---> (word,
+vladike ~~>
+ (word,
   head:(noun,
         agr:(Agr,
-             gender:fem,
-             num:pl),
-        sem:(gender:masc,
+             per:third,
+	         gen:fem_mas,
              num:pl)),
-  spr:[(head:(det,agr:Agr))],
-  subcat:[]).
+     spr:[(head:(det,
+                 agr:Agr),
+             sem:index:Ind)],
+     subcat:[],
+ sem:(index:(Ind,
+       object,
+       per:third,
+       gen:mas,
+       num:pl),
+       key:(Key,
+            pred:(a_ vladike_rel),
+            arg0:Ind),
+       rels:[Key])).
 
-vladike ---> (word,
+vladike ~~>
+ (word,
   head:(noun,
         agr:(
-            gender:fem,
-            num:pl),
-        sem:(
-             gender:(Gen,masc),
-             num:(Num,pl))),
-  spr:[(head:(det,agr:(num:Num,gender:Gen)))],
-  subcat:[]).
-
+             per:third,
+	         gen:fem_mas,
+             num:pl)),
+     spr:[(head:(det,
+                 agr:(
+                 gen:Gen,
+                 num:Num
+             )),
+             sem:index:Ind)],
+     subcat:[],
+ sem:(index:(Ind,
+       object,
+       per:Per,
+       gen:(Gen,mas),
+       num:(Num,pl)),
+       key:(Key,
+            pred:(a_ vladike_rel),
+            arg0:Ind),
+       rels:[Key])).
 % ADJECTIVES
-
-stari ---> (word,
-  head:(adj,
-        agr:(Agr,
-             gender:masc,
-             num:sg),
-  mod:[(head:(noun,agr:Agr))]),
+%Singular
+stara ~~>
+(word,
+ head:(adj,
+       agr:Agr,
+       mod:[
+           (head:(noun,
+                  agr:(Agr,
+                       num:Num,
+                       gen:Gen
+            )),
+            spr:[_],
+            sem:index:(Ind,
+                       num:(Num,sg),
+                       gen:(Gen,fem)
+                   )
+            )],
+       pre_modifier:plus
+ ),
+ sem:(index:Ind,
+       key:(Key,
+            pred:(a_ stara_rel),
+            arg0:Ind),
+       rels:[Key]),
   spr:[],
   subcat:[]).
 
-stara ---> (word,
-  head:(adj,
-        agr:(Agr,
-             gender:fem,
-             num:sg),
-  mod:[(head:(noun,agr:Agr))]),
+%Plural
+stari ~~>
+(word,
+ head:(adj,
+       agr:Agr,
+       mod:[
+           (head:(noun,
+                  agr:(Agr,
+                       num:Num,
+                       gen:Gen
+            )),
+            spr:[_],
+            sem:index:(Ind,
+                       num:Num,
+                       gen:(Gen,mas)
+                   )
+            )],
+       pre_modifier:plus
+ ),
+ sem:(index:Ind,
+       key:(Key,
+            pred:(a_ stari_rel),
+            arg0:Ind),
+       rels:[Key]),
   spr:[],
   subcat:[]).
 
-stare ---> (word,
-  head :(adj,
-         agr:(Agr,
-              num:pl,
-              gender:fem),
-  mod:[(head:(noun,agr:Agr))]),
+stare ~~>
+(word,
+ head:(adj,
+       agr:Agr,
+       mod:[
+           (head:(noun,
+                  agr:(Agr,
+                       num:pl,
+                       gen:fem
+            )),
+            spr:[_],
+            sem:index:Ind
+            )],
+       pre_modifier:plus
+ ),
+ sem:(index:Ind,
+       key:(Key,
+            pred:(a_ stare_rel),
+            arg0:Ind),
+       rels:[Key]),
   spr:[],
   subcat:[]).
 
-stari ---> (word,
-  head:(adj,
-        agr:(
-             gender:(Gen,masc),
-             num:(Num,pl)),
-  mod:[(head:(noun,sem:(gender:Gen,num:Num)))]),
-  spr:[],
-  subcat:[]).
-
-oni ---> (word,
+oni ~~> (word,
   head:(det,
-        agr:(gender:masc,
-             num:pl),
-  mod: []),
+        agr:(gen:mas,
+             num:pl)),
+  sem:(index:Ind,
+       key:(Key,
+            pred:(a_ oni_rel),
+            arg0:Ind),
+       rels:[Key]),
+  spr: [],
   subcat:[]).
 
-one ---> (word,
+one ~~> (word,
   head:(det,
-        agr:(gender:fem,
-             num:pl),
-  mod: []),
+        agr:(gen:fem,
+             num:pl)),
+  sem:(index:Ind,
+       key:(Key,
+            pred:(a_ one_rel),
+            arg0:Ind),
+       rels:[Key]),
+  spr: [],
   subcat:[]).

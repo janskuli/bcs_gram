@@ -67,14 +67,14 @@ que_symbol(@interrog).
 signature(signature).
 
 % load macros
-%:- [flex_macros].
-%:- [macros].
+:- [flex_macros].
+:- [macros].
 
 % load suffix information that is used by inflectional lexical rules
 %:- [suffixes].
 
 % load lexical rules
-%:- [lexrules].
+:- [lexrules].
 
 % load lexicon
 :- [lexicon].
@@ -86,7 +86,7 @@ signature(signature).
 :- [syntax].
 
 % load relational constraints
-%:- [constraints].
+:- [constraints].
 
 % load a test sequence
 :- [test_items].

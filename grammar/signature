@@ -1,40 +1,206 @@
 % -*-trale-prolog-*-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%   $RCSfile: signature,v $
 %%  $Revision: 1.2 $
-%%      $Date: 2005/10/20 08:17:02 $
+%%      $Date: 2006/02/05 16:20:40 $
 %%     Author: Stefan Mueller (Stefan.Mueller@cl.uni-bremen.de)
-%%    Purpose: 
+%%    Purpose: Eine kleine Spielzeuggrammatik für die Lehre
 %%   Language: Trale
-%      System: TRALE 2.3.7 under Sicstus 3.9.1
+%      System: TRALE 2.7.5 (release ) under Sicstus 3.10.1
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 type_hierarchy
 bot
   feat_struc
-    syn_struc phon:list head:pos spr:list subcat:list
+    syn_struc phon:list head:pos spr:list subcat:list sem:semantics
       syntactic_object
         phrase dtrs:list
-      word
-    pos mod:list
-      verb
-      prep
-      pos_agr agr:agr sem:sem
-        noun
-        det
-        adj
-    sem_agr num:num gender:gender
-     agr 
-     sem
-  num
-   sg
-   pl
-  gender
-   masc
-   fem
-   neut
+          headed_phrase head_dtr:syntactic_object
+            binary_headed_phrase non_head_dtr:syntactic_object
+              head_argument_phrase
+              head_adjunct_phrase
+        word reorder:bool
+          simple_word
+          complex_word dtr:stem_or_word
+      stem_or_word
+        stem infl:infl
+        &word
+      affix fk:fk
+        prefix
+        suffix
+          attr_adj_or_det_or_noun_or_fin_verb_i_suffix  % num
+            attr_adj_or_det_or_noun_i_suffix  % case num
+              noun_i_suffix fk:fk_n gen_e:bool dat_e:bool_or_both e_vor_n:bool
+              attr_adj_or_det_i_suffix  % gen dtype
+                attr_adj_i_suffix
+                det_i_suffix
+            adj_i_suffix
+              &attr_adj_i_suffix
+              prd_adj_i_suffix
+            fin_verb_i_suffix temo:temo % has person and number
+          verb_i_suffix fk:fk_v ep:bool epp:bool evp:bool sm:bool pl_n:bool spe:bool tm:bool em:bool
+            &fin_verb_i_suffix
+            nonfin_verb_i_suffix
+              ppp_verb_i_suffix
+              inf_verb_i_suffix
+    pos mod:list initial:bool pre_modifier:bool
+      agr_pos agr:agr
+        noun mod:e_list initial:plus
+        det mod:e_list
+        adj initial:minus
+      verb mod:e_list
+      prep initial:plus
+    agr %case:case per:per num:num case:case gen:genus
+    semantics index:index key:relation rels:list
+    relation pred:(a_ _) arg0:index
+      arg1_relation arg1:index
+        arg1_2_relation arg2:index
+          arg1_2_3_relation arg3:index
+    per_num_intro per:per num:num     % auxiliary type for feature introduction
+%      &fin_verb_i_suffix
+      &attr_adj_or_det_or_noun_or_fin_verb_i_suffix
+      per_num_gen_intro gen:genus
+        &object
+        dtype_per_num_case_gen_intro dtype:dtype case:case
+          &agr
+          &attr_adj_or_det_or_noun_i_suffix
   list
     e_list
     ne_list hd:bot tl:list
+  per
+    first_or_third
+      first
+      third
+    second_or_third  % in morphology for the selection of irregular stems
+      second
+      &third
+  num
+    sg
+    pl
+  case
+    nom_dat_acc % = not GEN used for propper nouns
+      nom_acc
+        nom
+        acc
+      dat_acc
+        dat
+        &acc
+    nom_gen_acc
+      &nom_acc
+      gen_acc
+        &gen
+        &acc
+    gen_dat_acc
+      gen_dat
+        &gen
+        &dat
+      &gen_acc
+      &dat_acc
+  genus
+    fem
+    mas_neu
+      mas
+      neu
+    fem_mas
+      &fem
+      &mas
+  index
+    object
+    event temo_intro:temo
+  temo_intro
+    temo
+  temo % tense and mood are collapsed into one type
+      pres
+        pres_ind_conj
+          pres_ind
+          &pres_conj
+        pres_ind_imp
+          &pres_ind
+          pres_imp
+        pres_conj_imp
+          &pres_conj
+          &pres_imp
+      past_ind_conj
+          past_ind
+          past_conj
+      ind_conj
+        &pres_ind_conj
+          &pres_ind
+          &pres_conj
+        &past_ind_conj
+        ind_or_past_conj
+          &ind
+          &past_ind_conj
+          pres_ind_or_past_conj
+            &pres_ind
+            &past_conj
+        ind
+          &pres_ind
+          &past_ind
+        conj
+          &pres_conj
+          &past_conj
+      ind_imp_or_past_conj
+        ind_imp
+          &ind
+          &pres_ind_imp
+            &pres_imp
+        imp_or_past_conj
+          &pres_imp
+          &past_conj
+        &ind_or_past_conj
+      conj_imp
+        &pres_conj_imp
+        &conj
+        &pres_imp
+        &imp_or_past_conj
+
+
+  fk
+    fk_n
+      nfk_1
+      nfk_2
+      nfk_3
+      nfk_4
+      nfk_e
+        nfk_e1
+        nfk_e2
+        nfk_e3
+      nfk_er
+      nfk_es
+      nfk_n1
+      nfk_n2
+      nfk_n3
+      nfk_n4
+      nfk_n5
+      nfk_s
+        nfk_s1
+        nfk_s2
+      nfk_p
+      nfk_i1
+      nfk_ten
+    fk_v
+      non_strong
+        v_weak
+        mixed_or_modal
+          mixed
+          modal
+      v_strong
+    dtype
+      weak
+      strong
+  infl affix:affix
+    noun_infl umlaut:(a_ _) k_umw:bool
+    verb_infl v_stems:v_stems bet1:bool
+  v_stems pres2:(a_ _) past:(a_ _) part:(a_ _) conj:(a_ _)  imp_st:(a_ _)
+  bool_or_both
+    bool
+      plus
+      minus
+    both
+     %bool
+  bool_or_t
+    &bool
+    t
 .
