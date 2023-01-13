@@ -57,7 +57,7 @@ vladike ~~>
   head:(noun,
         agr:(
              per:third,
-	         gen:fem_mas,
+	         gen:(Gen,fem_mas),
              num:pl)),
      spr:[(head:(det,
                  agr:(
@@ -138,7 +138,7 @@ stare ~~>
            (head:(noun,
                   agr:(Agr,
                        num:pl,
-                       gen:fem
+                       gen:fem_mas
             )),
             spr:[_],
             sem:index:Ind
@@ -162,7 +162,7 @@ oni ~~> (word,
             pred:(a_ oni_rel),
             arg0:Ind),
        rels:[Key]),
-  spr: [],
+  spr:[],
   subcat:[]).
 
 one ~~> (word,
@@ -174,5 +174,57 @@ one ~~> (word,
             pred:(a_ one_rel),
             arg0:Ind),
        rels:[Key]),
-  spr: [],
+  spr:[],
   subcat:[]).
+
+posvađale ~~> (word,
+  head:verb,
+  subcat:[
+    (head:(noun,
+       agr:(
+         num:pl,
+         gen:fem
+       )
+     ),
+     sem:index:Arg1,
+     subcat:[]
+    )
+  ],
+  sem:(
+    index:(Ind,event),
+    key:(Key,
+      pred:(a_ posvađale),
+      arg0:Ind,
+      arg1:Arg1
+    ),
+    rels:[Key]
+  ),
+  spr:[]
+).
+
+posvađali ~~> (word,
+  head:verb,
+  subcat:[
+          (head:(noun,
+             agr:(
+               num:pl,
+               gen:fem_mas
+             )
+           ),
+           sem:index:(Arg1,
+                 gen:mas
+                 ),
+           subcat:[]
+          )
+         ],
+  sem:(
+    index:(Ind,event),
+    key:(Key,
+      pred:(a_ posvađali),
+      arg0:Ind,
+      arg1:Arg1
+    ),
+    rels:[Key]
+  ),
+  spr:[]
+).
