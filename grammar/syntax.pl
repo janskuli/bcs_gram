@@ -63,6 +63,16 @@ h_spr(HeadDtr,NonHeadDtr) :=
  non_head_dtr:NonHeadDtr).
 
 
+h_cl(HeadDtr,NonHeadDtr) :=
+(subcat:append(Subcat,NHSubcat),
+ spr:Spr,
+ head:lex:minus,
+ head_dtr:(HeatDtr,
+   subcat:[NonHeadDtr|Subcat],
+   spr:Spr
+   ),
+ non_head_dtr:(NonHeadDtr,head:lex:plus,subcat:NHSubcat)
+).
 
 root :=
  (subcat:[]).

@@ -44,3 +44,8 @@ spr_h ## @h_spr(HeadDtr,NonHeadDtr)
   ===>
 cat> NonHeadDtr,
 cat> HeadDtr.
+
+h_cl ## @h_cl((HeadDtr,head:(verb,initial:plus)),(NonHeadDtr,head:lex:plus))
+  ===>
+cat> HeadDtr,
+cat> NonHeadDtr.
