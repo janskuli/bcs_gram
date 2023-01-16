@@ -12,6 +12,7 @@
 vladika ~~> (word,
   head:(noun,
     agr:(Agr,
+      case:nom,
       per:(Per,third),
       gen:(Gen,mas),
       num:(Num,sg)
@@ -41,6 +42,7 @@ vladika ~~> (word,
 vladike ~~> (word,
   head:(noun,
     agr:(Agr,
+      case:nom,
       per:third,
       gen:fem_mas,
       num:pl
@@ -70,6 +72,7 @@ vladike ~~> (word,
 vladike ~~> (word,
   head:(noun,
     agr:(
+      case:nom,
       per:third,
       gen:(Gen,fem_mas),
       num:pl
@@ -108,6 +111,7 @@ stara ~~> (word,
    mod:[(
      head:(noun,
        agr:(Agr,
+         case:nom,
          num:Num,
          gen:Gen
        )
@@ -138,6 +142,7 @@ stari ~~>(word,
     mod:[(
       head:(noun,
         agr:(Agr,
+          case:nom,
           num:Num,
           gen:Gen
         )
@@ -168,6 +173,7 @@ stare ~~>(word,
     mod:[(
       head:(noun,
         agr:(Agr,
+          case:nom,
           num:pl,
           gen:fem_mas
         )
@@ -192,6 +198,7 @@ stare ~~>(word,
 oni ~~> (word,
   head:(det,
     agr:(
+      case:nom,
       gen:mas,
       num:pl
     )
@@ -211,6 +218,7 @@ oni ~~> (word,
 one ~~> (word,
   head:(det,
     agr:(
+      case:nom,
       gen:fem,
       num:pl
     )
@@ -232,6 +240,7 @@ posvađale ~~> (word,
   subcat:[(
     head:(noun,
       agr:(
+        case:nom,
         num:pl,
         gen:fem
       )
@@ -256,6 +265,7 @@ posvađali ~~> (word,
   subcat:[(
     head:(noun,
       agr:(
+        case:nom,
         num:pl,
         gen:fem_mas
       )
