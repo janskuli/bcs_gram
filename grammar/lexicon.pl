@@ -294,3 +294,15 @@ posvađali ~~> (word,
   ),
   spr:[]
 ).
+
+su ~~> (word,
+  head:(verb,
+    vform:fin
+  ),
+  subcat:[(
+    head:(verb,
+      vform:fin
+    )
+  )],
+  spr: []
+).
