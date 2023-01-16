@@ -44,8 +44,8 @@ bot
             nonfin_verb_i_suffix
               ppp_verb_i_suffix
               inf_verb_i_suffix
-    pos mod:list initial:bool pre_modifier:bool
-      agr_pos agr:agr
+    pos mod:list initial:bool pre_modifier:bool lex:bool
+      agr_pos agr:agr lex:minus
         noun mod:e_list initial:plus
         det mod:e_list
         adj initial:minus
