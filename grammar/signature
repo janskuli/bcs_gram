@@ -49,7 +49,7 @@ bot
         noun mod:e_list initial:plus
         det mod:e_list
         adj initial:minus
-      verb mod:e_list
+      verb mod:e_list vform:vform
       prep initial:plus
     agr %case:case per:per num:num case:case gen:genus
     semantics index:index key:relation rels:list
@@ -108,6 +108,10 @@ bot
   index
     object
     event temo_intro:temo
+  vform
+    part
+    fin
+    inf
   temo_intro
     temo
   temo % tense and mood are collapsed into one type
