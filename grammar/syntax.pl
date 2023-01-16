@@ -78,7 +78,7 @@ h_cl(HeadDtr,NonHeadDtr) :=
    subcat:[NonHeadDtr|Subcat],
    spr:Spr
    ),
- non_head_dtr:(NonHeadDtr,head:lex:plus,subcat:NHSubcat)
+ non_head_dtr:(NonHeadDtr,head:(lex:plus,vform:part_inf),subcat:NHSubcat)
 ).
 
 root :=

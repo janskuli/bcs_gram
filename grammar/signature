@@ -109,9 +109,10 @@ bot
     object
     event temo_intro:temo
   vform
-    part
+    part_inf
+      part
+      inf
     fin
-    inf
   temo_intro
     temo
   temo % tense and mood are collapsed into one type
