@@ -236,7 +236,10 @@ one ~~> (word,
 ).
 
 posvađale ~~> (word,
-  head:verb,
+  head:(verb,
+    lex:plus,
+    vform:part
+  ),
   subcat:[(
     head:(noun,
       agr:(
@@ -246,6 +249,7 @@ posvađale ~~> (word,
       )
     ),
     sem:index:Arg1,
+    spr:[],
     subcat:[]
   )],
   sem:(
@@ -261,7 +265,10 @@ posvađale ~~> (word,
 ).
 
 posvađali ~~> (word,
-  head:verb,
+  head:(verb,
+    lex:plus,
+    vform:part
+  ),
   subcat:[(
     head:(noun,
       agr:(
@@ -273,6 +280,7 @@ posvađali ~~> (word,
     sem:index:(Arg1,
           gen:mas
           ),
+    spr:[],
     subcat:[]
   )],
   sem:(
