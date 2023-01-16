@@ -39,29 +39,36 @@ binary_headed_phrase *>
 h_arg(HeadDtr,NonHeadDtr) :=
 (subcat:Subcat,
  spr:Spr,
+ head:lex:minus,
  head_dtr:(HeadDtr,
-           subcat:[NonHeadDtr|Subcat],
-	   spr:Spr),
- non_head_dtr:NonHeadDtr).
+       subcat:[NonHeadDtr|Subcat],
+	   spr:Spr
+ ),
+ non_head_dtr:(NonHeadDtr,head:lex:minus)).
 
-h_adj(HeadDtr,NonHeadDtr) :=
-(subcat:Subcat,
+h_adj(HeadDtr,NonHeadDtr) := (
+ subcat:Subcat,
  spr:Spr,
-  head_dtr:(HeadDtr,
-            subcat:Subcat,
-	    spr:Spr),
+ head:lex:minus,
+ head_dtr:(HeadDtr,
+   subcat:Subcat,
+   spr:Spr
+  ),
   non_head_dtr:(NonHeadDtr,
-                head:mod:[HeadDtr],
+                head:(
+                  mod:[HeadDtr],
+                  lex:minus
+                ),
                 subcat:[])).
 
 h_spr(HeadDtr,NonHeadDtr) :=
 (spr:Spr,
  subcat:Subcat,
+ head:lex:minus,
  head_dtr:(HeadDtr,
            spr:[NonHeadDtr|Spr],
 	   subcat:Subcat),
- non_head_dtr:NonHeadDtr).
-
+ non_head_dtr:(NonHeadDtr,head:lex:minus)).
 
 h_cl(HeadDtr,NonHeadDtr) :=
 (subcat:append(Subcat,NHSubcat),
