@@ -155,6 +155,7 @@ stari ~~>(word,
       )],
     pre_modifier:plus
   ),
+  marking:plus,
   sem:(
     index:Ind,
     key:(Key,
@@ -178,11 +179,13 @@ stare ~~>(word,
           gen:fem_mas
         )
       ),
+      marking:minus,
       spr:[_],
       sem:index:Ind
     )],
     pre_modifier:plus
   ),
+  marking:minus,
   sem:(
     index:Ind,
     key:(Key,

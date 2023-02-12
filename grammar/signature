@@ -13,7 +13,7 @@
 type_hierarchy
 bot
   feat_struc
-    syn_struc phon:list head:pos spr:list subcat:list sem:semantics
+    syn_struc phon:list head:pos spr:list subcat:list sem:semantics marking:bool
       syntactic_object
         phrase dtrs:list
           headed_phrase head_dtr:syntactic_object

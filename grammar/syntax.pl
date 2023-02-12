@@ -55,12 +55,15 @@ h_adj(HeadDtr,NonHeadDtr) :=
    subcat:Subcat,
    spr:Spr
   ),
-  non_head_dtr:(NonHeadDtr,
+ marking:Marking,
+ non_head_dtr:(NonHeadDtr,
                 head:(
                   mod:[HeadDtr],
-                  lex:minus
+                  lex:minus,
+                  marking:Marking
                 ),
-                subcat:[])).
+                subcat:[])
+).
 
 h_spr(HeadDtr,NonHeadDtr) :=
 (spr:Spr,
@@ -70,18 +73,6 @@ h_spr(HeadDtr,NonHeadDtr) :=
            spr:[NonHeadDtr|Spr],
 	   subcat:Subcat),
  non_head_dtr:(NonHeadDtr,head:lex:minus)).
-
-%h_cl(HeadDtr,NonHeadDtr) :=
-%(subcat:Subcat,
-% spr:Spr,
-% head:Head,
-% head_dtr:(HeatDtr,
-%   head:verb,
-%   subcat:[NonHeadDtr|Subcat],
-%   spr:Spr
-%   ),
-% non_head_dtr:(NonHeadDtr,head:(lex:plus,vform:part_inf),subcat:NHSubcat)
-%).
 
 h_cl(HeadDtr,NonHeadDtr) :=
 (subcat:append(Subcat,NHSubcat),
