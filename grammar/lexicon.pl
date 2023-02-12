@@ -237,7 +237,7 @@ one ~~> (word,
   spr:[],
   subcat:[]
 ).
-
+%% FIXME: Make sure that verbs combine well with non-hybrid nouns. Possible overgeneration here.
 posvadale ~~> (word,
   head:(verb,
     lex:plus,
