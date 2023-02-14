@@ -51,17 +51,17 @@ h_adj(HeadDtr,NonHeadDtr) :=
  subcat:Subcat,
  spr:Spr,
  head:lex:minus,
+ marking:Marking,
  head_dtr:(HeadDtr,
    subcat:Subcat,
    spr:Spr
   ),
- marking:Marking,
  non_head_dtr:(NonHeadDtr,
                 head:(
                   mod:[HeadDtr],
-                  lex:minus,
-                  marking:Marking
+                  lex:minus
                 ),
+                marking:Marking,
                 subcat:[])
 ).
 
