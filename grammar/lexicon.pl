@@ -235,7 +235,7 @@ one ~~> (word,
   subcat:[]
 ).
 
-posvađale ~~> (word,
+posvadale ~~> (word,
   head:(verb,
     lex:plus,
     vform:part
@@ -255,7 +255,7 @@ posvađale ~~> (word,
   sem:(
     index:(Ind,event),
     key:(Key,
-      pred:(a_ posvađale),
+      pred:(a_ posvadale),
       arg0:Ind,
       arg1:Arg1
     ),
@@ -264,7 +264,7 @@ posvađale ~~> (word,
   spr:[]
 ).
 
-posvađali ~~> (word,
+posvadali ~~> (word,
   head:(verb,
     lex:plus,
     vform:part
@@ -286,7 +286,7 @@ posvađali ~~> (word,
   sem:(
     index:(Ind,event),
     key:(Key,
-      pred:(a_ posvađali),
+      pred:(a_ posvadali),
       arg0:Ind,
       arg1:Arg1
     ),
