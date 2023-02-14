@@ -42,3 +42,5 @@ t(28,"one stare vladike su posvadale",@root,1,verb-agreement).%No switch | conco
 t(29,"oni stare vladike su posvadali",@root,2,verb-agreement).%One switch | A-N concord FEM | D-AP index MASC
 t(30,"oni stari vladike su posvadali",@root,2,verb-agreement).%One switch | A-N index MASC
 t(31,"one stare vladike su posvadali",@root,1,verb-agreement).%One switch | D-N concord FEM| NP-V index MASC
+t(32,"oni stari stare vladike su posvadali",@root,2,two-adjectives).%One switch between A-AP index MASC
+t(33,"one stare stari vladike su posvadali",@root,0,two-adjectives).%Two switches
