@@ -46,7 +46,8 @@ h_arg(HeadDtr,NonHeadDtr) :=
  ),
  non_head_dtr:(NonHeadDtr,head:lex:minus)).
 
-h_adj(HeadDtr,NonHeadDtr) := (
+h_adj(HeadDtr,NonHeadDtr) :=
+(
  subcat:Subcat,
  spr:Spr,
  head:lex:minus,
@@ -70,22 +71,38 @@ h_spr(HeadDtr,NonHeadDtr) :=
 	   subcat:Subcat),
  non_head_dtr:(NonHeadDtr,head:lex:minus)).
 
+%h_cl(HeadDtr,NonHeadDtr) :=
+%(subcat:Subcat,
+% spr:Spr,
+% head:Head,
+% head_dtr:(HeatDtr,
+%   head:verb,
+%   subcat:[NonHeadDtr|Subcat],
+%   spr:Spr
+%   ),
+% non_head_dtr:(NonHeadDtr,head:(lex:plus,vform:part_inf),subcat:NHSubcat)
+%).
+
 h_cl(HeadDtr,NonHeadDtr) :=
 (subcat:append(Subcat,NHSubcat),
  spr:Spr,
- head:lex:minus,
- head_dtr:(HeatDtr,
-   subcat:[NonHeadDtr|Subcat],
-   spr:Spr
-   ),
- non_head_dtr:(NonHeadDtr,head:(lex:plus,vform:part_inf),subcat:NHSubcat)
+ head_dtr:(HeadDtr,
+       subcat:[NonHeadDtr|Subcat],
+	   spr:Spr
+ ),
+ non_head_dtr:(NonHeadDtr,subcat:NHSubcat,spr:[])).
+
+n_bar(HeadDtr) :=
+(spr:[],
+ subcat:Subcat,
+ head_dtr:(HeadDtr,spr:[_],subcat:Subcat)
 ).
 
 root :=
- (subcat:[]).
+ (subcat:[],spr:[]).
 
 interrog :=
  (@root).
 
 decl :=
- (@root).
+(@root).

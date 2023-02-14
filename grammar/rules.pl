@@ -45,7 +45,11 @@ spr_h ## @h_spr(HeadDtr,NonHeadDtr)
 cat> NonHeadDtr,
 cat> HeadDtr.
 
-h_cl ## @h_cl((HeadDtr,head:(verb,initial:plus)),(NonHeadDtr,head:lex:plus))
+h_cl ## @h_cl((HeadDtr,head:verb),(NonHeadDtr,head:lex:plus))
   ===>
 cat> HeadDtr,
 cat> NonHeadDtr.
+
+n_bar ## @n_bar((HeadDtr,head:noun))
+  ===>
+cat>HeadDtr.

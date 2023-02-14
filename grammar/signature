@@ -20,6 +20,7 @@ bot
             binary_headed_phrase non_head_dtr:syntactic_object
               head_argument_phrase
               head_adjunct_phrase
+              head_cluster_phrase
         word reorder:bool
           simple_word
           complex_word dtr:stem_or_word

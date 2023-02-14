@@ -301,8 +301,9 @@ su ~~> (word,
   ),
   subcat:[(
     head:(verb,
-      vform:fin
+      vform:part
     )
   )],
+  sem:rels:[],
   spr: []
 ).
