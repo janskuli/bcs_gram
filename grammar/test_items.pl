@@ -24,23 +24,23 @@ t(11,"one stari vladike",@root,0,determinative-attributive).%Two switches
 t(12,"oni stari vladike",@root,2,determinative-attributive).%One switch | index MASC
 t(13,"one stare vladike",@root,1,determinative-attributive).%No switch | concord agreemen FEM
 % VP
-t(14,"vladika su posvadale",@root,0,verb-agreement).
-t(15,"vladike su posvadali",@root,2,verb-agreement).%One switch | N-VP index MASC
-t(16,"vladike su posvadale",@root,1,verb-agreement).%No switch | concord FEM
-t(17,"stari vladika su posvadale",@root,0,verb-agreement).
-t(18,"stari vladike su posvadali",@root,2,verb-agreement).%One switch | A-N index MASC
-t(19,"stari vladike su posvadale",@root,0,verb-agreement).%Two switches
-t(20,"stare vladike su posvadali",@root,2,verb-agreement).%One switch | A-N concord FEM | NP-V index MASC
-t(21,"stare vladike su posvadale",@root,1,verb-agreement).%No switch | concord FEM
-t(22,"oni vladike su posvadali",@root,2,verb-agreement).%One switch | D-N index MASC
-t(23,"oni vladike su posvadale",@root,0,verb-agreement).%Two switches
-t(24,"one vladike su posvadali",@root,1,verb-agreement).%One switch | D-N concord FEM | NP-V index MASC
-t(25,"one vladike su posvadale",@root,1,verb-agreement).%No switch | concord FEM
-t(26,"oni stare vladike su posvadale",@root,0,verb-agreement).%Two switches
-t(27,"oni stari vladike su posvadale",@root,0,verb-agreement).%Two switches
-t(28,"one stare vladike su posvadale",@root,1,verb-agreement).%No switch | concord FEM
-t(29,"oni stare vladike su posvadali",@root,2,verb-agreement).%One switch | A-N concord FEM | D-AP index MASC
-t(30,"oni stari vladike su posvadali",@root,2,verb-agreement).%One switch | A-N index MASC
-t(31,"one stare vladike su posvadali",@root,1,verb-agreement).%One switch | D-N concord FEM| NP-V index MASC
-t(32,"oni stari stare vladike su posvadali",@root,2,two-adjectives).%One switch between A-AP index MASC
-t(33,"one stare stari vladike su posvadali",@root,0,two-adjectives).%Two switches
+t(14,"vladika su se posvadale",@root,0,verb-agreement).
+t(15,"vladike su se posvadali",@root,2,verb-agreement).%One switch | N-VP index MASC
+t(16,"vladike su se posvadale",@root,1,verb-agreement).%No switch | concord FEM
+t(17,"stari vladika su se posvadale",@root,0,verb-agreement).
+t(18,"stari vladike su se posvadali",@root,2,verb-agreement).%One switch | A-N index MASC
+t(19,"stari vladike su se posvadale",@root,0,verb-agreement).%Two switches
+t(20,"stare vladike su se posvadali",@root,2,verb-agreement).%One switch | A-N concord FEM | NP-V index MASC
+t(21,"stare vladike su se posvadale",@root,1,verb-agreement).%No switch | concord FEM
+t(22,"oni vladike su se posvadali",@root,2,verb-agreement).%One switch | D-N index MASC
+t(23,"oni vladike su se posvadale",@root,0,verb-agreement).%Two switches
+t(24,"one vladike su se posvadali",@root,1,verb-agreement).%One switch | D-N concord FEM | NP-V index MASC
+t(25,"one vladike su se posvadale",@root,1,verb-agreement).%No switch | concord FEM
+t(26,"oni stare vladike su se posvadale",@root,0,verb-agreement).%Two switches
+t(27,"oni stari vladike su se posvadale",@root,0,verb-agreement).%Two switches
+t(28,"one stare vladike su se posvadale",@root,1,verb-agreement).%No switch | concord FEM
+t(29,"oni stare vladike su se posvadali",@root,2,verb-agreement).%One switch | A-N concord FEM | D-AP index MASC
+t(30,"oni stari vladike su se posvadali",@root,2,verb-agreement).%One switch | A-N index MASC
+t(31,"one stare vladike su se posvadali",@root,1,verb-agreement).%One switch | D-N concord FEM| NP-V index MASC
+t(32,"oni stari stare vladike su se posvadali",@root,2,two-adjectives).%One switch between A-AP index MASC
+t(33,"one stare stari vladike su se posvadali",@root,0,two-adjectives).%Two switches
