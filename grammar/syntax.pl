@@ -68,11 +68,10 @@ h_adj(HeadDtr,NonHeadDtr) :=
 h_spr(HeadDtr,NonHeadDtr) :=
 (spr:Spr,
  subcat:Subcat,
- head:lex:minus,
  head_dtr:(HeadDtr,
            spr:[NonHeadDtr|Spr],
 	   subcat:Subcat),
- non_head_dtr:(NonHeadDtr,head:lex:minus)).
+ non_head_dtr:NonHeadDtr).
 
 h_cl(HeadDtr,NonHeadDtr) :=
 (subcat:append(Subcat,NHSubcat),

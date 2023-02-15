@@ -264,7 +264,14 @@ posvadale ~~> (word,
     ),
     rels:[Key]
   ),
-  spr:[]
+  spr:[(
+    head:(noun,
+      agr:(
+        case:acc,
+        num:pl
+    )),
+    sem:index:Arg1
+  )]
 ).
 
 posvadali ~~> (word,
@@ -295,7 +302,10 @@ posvadali ~~> (word,
     ),
     rels:[Key]
   ),
-  spr:[]
+  spr:[(
+    head:(noun,
+      agr:case:acc
+  ))]
 ).
 
 su ~~> (word,
@@ -309,4 +319,13 @@ su ~~> (word,
   )],
   sem:rels:[],
   spr: []
+).
+
+se ~~> (word,
+  head:(noun,
+        agr:case:acc
+  ),
+  sem:rels:[],
+  subcat:[],
+  spr:[]
 ).
