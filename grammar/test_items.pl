@@ -16,7 +16,7 @@ t(3,"stare vladika",@root,0,attributive).
 t(4,"stare vladike",@root,3,attributive).%Concord agreement plural
 t(5,"stari vladike",@root,2,attributive).%Index agreement plural
 t(6,"oni vladike",@root,2,determinative).%Index agreement plural
-t(7,"one vladike",@root,1,determinative).%Concord agreement plural
+t(7,"one vladike",@root,2,determinative).%Concord agreement plural
 t(8,"oni vladika",@root,0,determinative).
 t(9,"one vladika",@root,0,determinative).
 t(10,"oni stare vladike",@root,1,determinative-attributive).%One switch | A-N concord FEM | D-AP index MASC
@@ -44,3 +44,9 @@ t(30,"oni stari vladike su posvadali",@root,2,verb-agreement).%One switch | A-N 
 t(31,"one stare vladike su posvadali",@root,1,verb-agreement).%One switch | D-N concord FEM| NP-V index MASC
 t(32,"oni stari stare vladike su posvadali",@root,1,two-adjectives).%One switch between A-AP index MASC
 t(33,"one stare stari vladike su posvadali",@root,0,two-adjectives).%Two switches
+t(34,"stare knjige su posvadali",@root,0,class-2-f).
+t(35,"stari knjige",@root,0,class-2-f).
+t(36,"stare knjige su posvadale",@root,1,class-2-f).
+t(37,"stari prozori su posvadali",@root,1,class-1-m).
+t(38,"stare prozori",@root,0,class-1-m).
+t(39,"stari prozori su posvadale",@root,0,class-1-m).
