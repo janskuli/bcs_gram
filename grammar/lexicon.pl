@@ -71,10 +71,40 @@ vladike ~~> (word,
 
 vladike ~~> (word,
   head:(noun,
+    agr:(Agr,
+      case:nom,
+      per:third,
+      gen:fem,
+      num:pl
+    )
+  ),
+  spr:[(
+    head:(det,
+      agr:Agr),
+    sem:index:Ind
+  )],
+  subcat:[],
+  sem:(
+    index:(Ind,
+      object,
+      per:third,
+      gen:fem,
+      num:pl
+    ),
+    key:(Key,
+      pred:(a_ vladike_rel),
+      arg0:Ind
+    ),
+    rels:[Key]
+  )
+).
+
+vladike ~~> (word,
+  head:(noun,
     agr:(
       case:nom,
       per:third,
-      gen:(Gen,fem_mas),
+      gen:fem_mas,
       num:pl
     )
   ),
@@ -201,10 +231,10 @@ stari ~~>(word,
         agr:(Agr,
           case:nom,
           num:Num,
-          gen:Gen
+          gen:fem_mas
         )
       ),
-      spr:[_],
+      spr:[(head:agr:gen:Gen)],
       sem:index:(Ind,
           num:Num,
           gen:(Gen,mas)
@@ -233,7 +263,7 @@ stare ~~>(word,
         agr:(Agr,
           case:nom,
           num:pl,
-          gen:fem_mas
+          gen:fem
         )
       ),
       marking:minus,
@@ -302,13 +332,11 @@ posvadale ~~> (word,
   ),
   subcat:[(
     head:(noun,
-      agr:(
-        case:nom,
-        num:pl,
-        gen:fem
-      )
-    ),
-    sem:index:Arg1,
+      agr:case:nom
+      ),
+    sem:index:(Arg1,
+           gen:fem,
+           num:pl),
     spr:[],
     subcat:[]
   )],
@@ -331,14 +359,11 @@ posvadali ~~> (word,
   ),
   subcat:[(
     head:(noun,
-      agr:(
-        case:nom,
-        num:pl,
-        gen:fem_mas
-      )
+      agr:case:nom
     ),
     sem:index:(Arg1,
-          gen:mas
+          gen:mas,
+          num:pl
           ),
     spr:[],
     subcat:[]
