@@ -103,6 +103,63 @@ vladike ~~> (word,
   )
 ).
 
+knjige ~~> (word,
+  head:(noun,
+    agr:(Agr,
+      case:nom,
+      per:third,
+      gen:fem,
+      num:pl
+    )
+  ),
+  spr:[(
+    head:(det,
+      agr:Agr)
+  )],
+  subcat:[],
+  sem:(
+    index:(Ind,
+      object,
+      per:third,
+      gen:fem,
+      num:pl
+    ),
+    key:(Key,
+      pred:(a_ knjige_rel),
+      arg0:Ind
+    ),
+    rels:[Key]
+  )
+).
+
+prozori ~~> (word,
+  head:(noun,
+    agr:(Agr,
+      case:nom,
+      per:third,
+      gen:mas,
+      num:pl
+    )
+  ),
+  spr:[(
+    head:(det,
+      agr:Agr)
+  )],
+  subcat:[],
+  sem:(
+    index:(Ind,
+      object,
+      per:third,
+      gen:mas,
+      num:pl
+    ),
+    key:(Key,
+      pred:(a_ prozori_rel),
+      arg0:Ind
+    ),
+    rels:[Key]
+  )
+).
 % ADJECTIVES
 %Singular
 stara ~~> (word,
