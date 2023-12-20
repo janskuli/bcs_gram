@@ -8,14 +8,44 @@
 %%   Language: Trale
 %      System: TRALE 2.3.7 under Sicstus 3.9.1
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%SG
 vladika ~~> (word,
   head:(noun,
     agr:(Agr,
       case:nom,
-      per:(Per,third),
+      gen:Gen,
+      num:Num
+    )
+  ),
+  spr:[(
+    head:(det,
+      agr:Agr),
+    sem:index:Ind
+  )],
+  subcat:[],
+  sem:(
+    index:(Ind,
+      object,
+      per:third,
       gen:(Gen,mas),
       num:(Num,sg)
+    ),
+    key:(Key,
+      pred:(a_ vladika_rel),
+      arg0:Ind
+    ),
+    rels:[Key]
+   )
+).
+%PL
+%noun-2_f
+vladike ~~> (word,
+  head:(noun,
+    agr:(Agr,
+      case:nom,
+      per:(Per,third),
+      gen:(Gen,fem),
+      num:(Num,pl)
     )
   ),
   spr:[(
@@ -32,20 +62,21 @@ vladika ~~> (word,
       num:Num
     ),
     key:(Key,
-      pred:(a_ vladika_rel),
+      pred:(a_ vladike_rel),
       arg0:Ind
     ),
     rels:[Key]
-   )
+  )
 ).
 
+%noun-2-pl
 vladike ~~> (word,
   head:(noun,
     agr:(Agr,
       case:nom,
-      per:third,
+      per:(Per,third),
       gen:fem_mas,
-      num:pl
+      num:(Num,pl)
     )
   ),
   spr:[(
@@ -57,9 +88,9 @@ vladike ~~> (word,
   sem:(
     index:(Ind,
       object,
-      per:third,
+      per:Per,
       gen:mas,
-      num:pl
+      num:Num
     ),
     key:(Key,
       pred:(a_ vladike_rel),
@@ -68,13 +99,13 @@ vladike ~~> (word,
     rels:[Key]
   )
 ).
-
+%noun-2-pl-spr-m
 vladike ~~> (word,
   head:(noun,
     agr:(
       case:nom,
-      per:third,
-      gen:(Gen,fem_mas),
+      per:(Per,third),
+      gen:fem_mas,
       num:pl
     )
   ),
@@ -143,19 +174,11 @@ stari ~~>(word,
       head:(noun,
         agr:(Agr,
           case:nom,
-          num:Num,
-          gen:Gen
-        )
-      ),
-      spr:[_],
-      sem:index:(Ind,
-          num:Num,
-          gen:(Gen,mas)
-        )
+          gen:mas)),
+      spr:[_]
       )],
     pre_modifier:plus
   ),
-  marking:plus,
   sem:(
     index:Ind,
     key:(Key,
@@ -176,16 +199,14 @@ stare ~~>(word,
         agr:(Agr,
           case:nom,
           num:pl,
-          gen:fem_mas
+          gen:fem
         )
       ),
-      marking:minus,
       spr:[_],
       sem:index:Ind
     )],
     pre_modifier:plus
   ),
-  marking:minus,
   sem:(
     index:Ind,
     key:(Key,
@@ -244,14 +265,9 @@ posvadale ~~> (word,
     vform:part
   ),
   subcat:[(
-    head:(noun,
-      agr:(
-        case:nom,
-        num:pl,
-        gen:fem
-      )
-    ),
-    sem:index:Arg1,
+    head:noun,
+    sem:index:(Arg1,
+            gen:fem),
     spr:[],
     subcat:[]
   )],
@@ -273,16 +289,9 @@ posvadali ~~> (word,
     vform:part
   ),
   subcat:[(
-    head:(noun,
-      agr:(
-        case:nom,
-        num:pl,
-        gen:fem_mas
-      )
-    ),
+    head:noun,
     sem:index:(Arg1,
-          gen:mas
-          ),
+          gen:mas),
     spr:[],
     subcat:[]
   )],
