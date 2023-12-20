@@ -27,10 +27,41 @@ vladika ~~> (word,
     index:(Ind,
       object,
       per:third,
-      gen:(Gen,mas),
+      gen:Gen,
       num:(Num,sg)
     ),
     key:(Key,
+      sex:(Gen,mas),
+      pred:(a_ vladika_rel),
+      arg0:Ind
+    ),
+    rels:[Key]
+   )
+).
+
+vladika ~~> (word,
+  head:(noun,
+    agr:(Agr,
+      case:nom,
+      gen:Gen,
+      num:Num
+    )
+  ),
+  spr:[(
+    head:(det,
+      agr:Agr),
+    sem:index:Ind
+  )],
+  subcat:[],
+  sem:(
+    index:(Ind,
+      object,
+      per:third,
+      gen:Gen,
+      num:(Num,sg)
+    ),
+    key:(Key,
+      sex:(Gen,fem),
       pred:(a_ vladika_rel),
       arg0:Ind
     ),
@@ -62,6 +93,7 @@ vladike ~~> (word,
       num:Num
     ),
     key:(Key,
+      sex:mas,
       pred:(a_ vladike_rel),
       arg0:Ind
     ),
@@ -93,6 +125,7 @@ vladike ~~> (word,
       num:Num
     ),
     key:(Key,
+      sex:mas,
       pred:(a_ vladike_rel),
       arg0:Ind
     ),
@@ -127,6 +160,7 @@ vladike ~~> (word,
       num:(Num,pl)
     ),
     key:(Key,
+      sex:mas,
       pred:(a_ vladike_rel),
       arg0:Ind
     ),
@@ -267,7 +301,8 @@ posvadale ~~> (word,
   subcat:[(
     head:noun,
     sem:index:(Arg1,
-            gen:fem),
+            gen:fem,
+            num:pl),
     spr:[],
     subcat:[]
   )],
@@ -291,7 +326,8 @@ posvadali ~~> (word,
   subcat:[(
     head:noun,
     sem:index:(Arg1,
-          gen:mas),
+          gen:mas,
+          num:pl),
     spr:[],
     subcat:[]
   )],

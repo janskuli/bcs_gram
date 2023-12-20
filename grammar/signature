@@ -54,7 +54,7 @@ bot
       prep initial:plus
     agr %case:case per:per num:num case:case gen:genus
     semantics index:index key:relation rels:list
-    relation pred:(a_ _) arg0:index
+    relation pred:(a_ _) arg0:index sex:fem_mas
       arg1_relation arg1:index
         arg1_2_relation arg2:index
           arg1_2_3_relation arg3:index

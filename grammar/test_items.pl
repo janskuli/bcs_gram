@@ -11,7 +11,7 @@
 
 % NP
 t(1,"stari vladika",@root,1,attributive).%Index agreement singular
-t(2,"stara vladika",@root,0,attributive).
+t(2,"stara vladika",@root,1,attributive).
 t(3,"stare vladika",@root,0,attributive).
 t(4,"stare vladike",@root,3,attributive).%Concord agreement plural
 t(5,"stari vladike",@root,2,attributive).%Index agreement plural
