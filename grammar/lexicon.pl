@@ -8,7 +8,7 @@
 %%   Language: Trale
 %      System: TRALE 2.3.7 under Sicstus 3.9.1
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%SG
+%
 vladika ~~> (word,
   head:(noun,
     agr:(Agr,
@@ -39,6 +39,35 @@ vladika ~~> (word,
    )
 ).
 
+vladike ~~> (word,
+  head:(noun,
+    agr:(Agr,
+      case:nom,
+      gen:Gen,
+      num:Num
+    )
+  ),
+  spr:[(
+    head:(det,
+      agr:Agr),
+    sem:index:Ind
+  )],
+  subcat:[],
+  sem:(
+    index:(Ind,
+      object,
+      per:third,
+      gen:Gen,
+      num:(Num,pl)
+    ),
+    key:(Key,
+      sex:(Gen,mas),
+      pred:(a_ vladika_rel),
+      arg0:Ind
+    ),
+    rels:[Key]
+   )
+).
 vladika ~~> (word,
   head:(noun,
     agr:(Agr,
@@ -68,8 +97,37 @@ vladika ~~> (word,
     rels:[Key]
    )
 ).
-%PL
-%noun-2_f
+
+vladike ~~> (word,
+  head:(noun,
+    agr:(Agr,
+      case:nom,
+      gen:Gen,
+      num:Num
+    )
+  ),
+  spr:[(
+    head:(det,
+      agr:Agr),
+    sem:index:Ind
+  )],
+  subcat:[],
+  sem:(
+    index:(Ind,
+      object,
+      per:third,
+      gen:Gen,
+      num:(Num,pl)
+    ),
+    key:(Key,
+      sex:(Gen,fem),
+      pred:(a_ vladika_rel),
+      arg0:Ind
+    ),
+    rels:[Key]
+   )
+).
+%concord:fem sex:masc
 vladike ~~> (word,
   head:(noun,
     agr:(Agr,
@@ -100,14 +158,13 @@ vladike ~~> (word,
     rels:[Key]
   )
 ).
-
-%noun-2-pl
+%concord:fem sex:masc index:masc
 vladike ~~> (word,
   head:(noun,
     agr:(Agr,
       case:nom,
       per:(Per,third),
-      gen:fem_mas,
+      gen:fem,
       num:(Num,pl)
     )
   ),
@@ -121,34 +178,31 @@ vladike ~~> (word,
     index:(Ind,
       object,
       per:Per,
-      gen:mas,
+      gen:Gen,
       num:Num
     ),
     key:(Key,
-      sex:mas,
+      sex:(Gen,mas),
       pred:(a_ vladike_rel),
       arg0:Ind
     ),
     rels:[Key]
   )
 ).
-%noun-2-pl-spr-m
+%concord:fem sex:masc index:masc spr:masc
 vladike ~~> (word,
   head:(noun,
-    agr:(
+    agr:(Agr,
       case:nom,
       per:(Per,third),
-      gen:fem_mas,
-      num:pl
+      gen:fem,
+      num:(Num,pl)
     )
   ),
   spr:[(
     head:(det,
       agr:(
-        gen:Gen,
-        num:Num
-      )
-    ),
+        gen:Gen)),
     sem:index:Ind
   )],
   subcat:[],
@@ -156,11 +210,11 @@ vladike ~~> (word,
     index:(Ind,
       object,
       per:Per,
-      gen:(Gen,mas),
-      num:(Num,pl)
+      gen:Gen,
+      num:Num
     ),
     key:(Key,
-      sex:mas,
+      sex:(Gen,mas),
       pred:(a_ vladike_rel),
       arg0:Ind
     ),
