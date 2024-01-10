@@ -8,9 +8,11 @@
 %%   Language: Trale
 %      System: TRALE 2.3.7 under Sicstus 3.9.1
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
+
+% Nouns
+% concord:mas, index: mas, spr: mas
 vladika ~~> (word,
-  head:(noun,
+  head:(class_2_empty,
     agr:(Agr,
       case:nom,
       gen:Gen,
@@ -39,102 +41,13 @@ vladika ~~> (word,
    )
 ).
 
+%concord: fem, index: fem, spr: fem
 vladike ~~> (word,
-  head:(noun,
+  head:(class_2_f,
     agr:(Agr,
       case:nom,
-      gen:Gen,
-      num:Num
-    )
-  ),
-  spr:[(
-    head:(det,
-      agr:Agr),
-    sem:index:Ind
-  )],
-  subcat:[],
-  sem:(
-    index:(Ind,
-      object,
-      per:third,
-      gen:Gen,
-      num:(Num,pl)
-    ),
-    key:(Key,
-      sex:(Gen,mas),
-      pred:(a_ vladika_rel),
-      arg0:Ind
-    ),
-    rels:[Key]
-   )
-).
-vladika ~~> (word,
-  head:(noun,
-    agr:(Agr,
-      case:nom,
-      gen:Gen,
-      num:Num
-    )
-  ),
-  spr:[(
-    head:(det,
-      agr:Agr),
-    sem:index:Ind
-  )],
-  subcat:[],
-  sem:(
-    index:(Ind,
-      object,
-      per:third,
-      gen:Gen,
-      num:(Num,sg)
-    ),
-    key:(Key,
-      sex:(Gen,fem),
-      pred:(a_ vladika_rel),
-      arg0:Ind
-    ),
-    rels:[Key]
-   )
-).
-
-vladike ~~> (word,
-  head:(noun,
-    agr:(Agr,
-      case:nom,
-      gen:Gen,
-      num:Num
-    )
-  ),
-  spr:[(
-    head:(det,
-      agr:Agr),
-    sem:index:Ind
-  )],
-  subcat:[],
-  sem:(
-    index:(Ind,
-      object,
-      per:third,
-      gen:Gen,
-      num:(Num,pl)
-    ),
-    key:(Key,
-      sex:(Gen,fem),
-      pred:(a_ vladika_rel),
-      arg0:Ind
-    ),
-    rels:[Key]
-   )
-).
-%concord:fem sex:masc
-vladike ~~> (word,
-  head:(noun,
-    agr:(Agr,
-      case:nom,
-      per:(Per,third),
       gen:(Gen,fem),
-      num:(Num,pl)
+      num:Num
     )
   ),
   spr:[(
@@ -146,26 +59,26 @@ vladike ~~> (word,
   sem:(
     index:(Ind,
       object,
-      per:Per,
+      per:third,
       gen:Gen,
-      num:Num
+      num:(Num,pl)
     ),
     key:(Key,
       sex:mas,
-      pred:(a_ vladike_rel),
+      pred:(a_ vladika_rel),
       arg0:Ind
     ),
     rels:[Key]
-  )
+   )
 ).
-%concord:fem sex:masc index:masc
+
+% concord: sex, index: mas, spr:concord
 vladike ~~> (word,
-  head:(noun,
+  head:(class_2_m,
     agr:(Agr,
       case:nom,
-      per:(Per,third),
-      gen:fem,
-      num:(Num,pl)
+      gen:fem_mas,
+      num:Num
     )
   ),
   spr:[(
@@ -177,31 +90,33 @@ vladike ~~> (word,
   sem:(
     index:(Ind,
       object,
-      per:Per,
-      gen:Gen,
-      num:Num
+      per:third,
+      gen:mas,
+      num:(Num,pl)
     ),
     key:(Key,
-      sex:(Gen,mas),
-      pred:(a_ vladike_rel),
+      sex:mas,
+      pred:(a_ vladika_rel),
       arg0:Ind
     ),
     rels:[Key]
-  )
+   )
 ).
-%concord:fem sex:masc index:masc spr:masc
+
+%concord:sex index:masc spr:masc
 vladike ~~> (word,
-  head:(noun,
-    agr:(Agr,
-      case:nom,
-      per:(Per,third),
-      gen:fem,
+  head:(class_2_spr,
+    agr:(
+      case:(Case,nom),
+      gen:fem_mas,
       num:(Num,pl)
     )
   ),
   spr:[(
     head:(det,
       agr:(
+        case:Case,
+        num:Num,
         gen:Gen)),
     sem:index:Ind
   )],
@@ -209,7 +124,7 @@ vladike ~~> (word,
   sem:(
     index:(Ind,
       object,
-      per:Per,
+      per:third,
       gen:Gen,
       num:Num
     ),
@@ -231,15 +146,11 @@ stara ~~> (word,
      head:(noun,
        agr:(Agr,
          case:nom,
-         num:Num,
-         gen:Gen
+         num:sg,
+         gen:fem
        )
      ),
-     spr:[_],
-     sem:index:(Ind,
-           num:(Num,sg),
-           gen:(Gen,fem)
-         )
+     spr:[_]
    )],
    pre_modifier:plus
  ),
@@ -346,7 +257,8 @@ one ~~> (word,
   spr:[],
   subcat:[]
 ).
-%% FIXME: Make sure that verbs combine well with non-hybrid nouns. Possible overgeneration here.
+
+%Verbs
 posvadale ~~> (word,
   head:(verb,
     lex:plus,

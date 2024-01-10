@@ -48,6 +48,12 @@ bot
     pos mod:list initial:bool pre_modifier:bool lex:bool
       agr_pos agr:agr lex:minus
         noun mod:e_list initial:plus
+          class_2
+            class_2_empty
+            class_2_pl
+              class_2_f
+              class_2_m
+                class_2_spr
         det mod:e_list
         adj initial:minus
       verb mod:e_list vform:vform
