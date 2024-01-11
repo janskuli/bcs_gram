@@ -37,6 +37,7 @@ vladika ~~> (word,
    )
 ).
 
+%concord:fem, index:fem
 vladike ~~> (word,
   head:(class_2_f,
     agr:(Agr,
@@ -62,7 +63,8 @@ vladike ~~> (word,
     rels:[Key]
    )
 ).
-%concord: fem, index: fem
+
+%concord: sex, index: mas
 vladike ~~> (word,
   head:(class_2_m,
     agr:(Agr,
@@ -77,11 +79,11 @@ vladike ~~> (word,
     index:(Ind,
       object,
       per:third,
-      gen:mas,
+      gen:Gen,
       num:(Num,pl)
     ),
     key:(Key,
-      sex:mas,
+      sex:(Gen,mas),
       pred:(a_ vladika_rel),
       arg0:Ind
     ),
@@ -117,7 +119,7 @@ stara ~~> (word,
   marking:minus
 ).
 
-%Plural
+%Plural masculine
 stari ~~>(word,
   head:(adj,
     agr:Agr,
@@ -142,6 +144,7 @@ stari ~~>(word,
   marking:minus
 ).
 
+%Plural feminine
 stare ~~>(word,
   head:(adj,
     agr:Agr,
@@ -170,6 +173,8 @@ stare ~~>(word,
   marking:minus
 ).
 
+%Determiners
+%Plural masculine
 oni ~~> (word,
   head:(det,
     agr:(
@@ -179,7 +184,7 @@ oni ~~> (word,
     ),
     select:[(
       head:(noun,
-        agr:(Agr,
+        agr:(
           case:(Case,nom),
           num:(Num,pl),
           gen:fem_mas
@@ -203,6 +208,7 @@ oni ~~> (word,
   marking:plus
 ).
 
+%Plural feminine
 one ~~> (word,
   head:(det,
     agr:Agr,
