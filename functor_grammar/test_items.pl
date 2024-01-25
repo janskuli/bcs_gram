@@ -13,15 +13,15 @@
 t(1,"stari vladika",@root,1,attributive).%Index agreement singular
 t(2,"stara vladika",@root,0,attributive).
 t(3,"stare vladika",@root,0,attributive).
-t(4,"stare vladike",@root,3,attributive).%Concord agreement plural
-t(5,"stari vladike",@root,2,attributive).%Index agreement plural
-t(6,"oni vladike",@root,2,determinative).%Index agreement plural
+t(4,"stare vladike",@root,2,attributive).%Concord agreement plural
+t(5,"stari vladike",@root,1,attributive).%Index agreement plural
+t(6,"oni vladike",@root,1,determinative).%Index agreement plural
 t(7,"one vladike",@root,2,determinative).%Concord agreement plural
 t(8,"oni vladika",@root,0,determinative).
 t(9,"one vladika",@root,0,determinative).
 t(10,"oni stare vladike",@root,1,determinative-attributive).%One switch | A-N concord FEM | D-AP index MASC
 t(11,"one stari vladike",@root,0,determinative-attributive).%Two switches
-t(12,"oni stari vladike",@root,2,determinative-attributive).%One switch | index MASC
+t(12,"oni stari vladike",@root,1,determinative-attributive).%One switch | index MASC
 t(13,"one stare vladike",@root,2,determinative-attributive).%No switch | concord agreemen FEM
 % VP
 t(14,"vladika su posvadale",@root,0,verb-agreement).
@@ -44,3 +44,4 @@ t(30,"oni stari vladike su posvadali",@root,1,verb-agreement).%One switch | A-N 
 t(31,"one stare vladike su posvadali",@root,1,verb-agreement).%One switch | D-N concord FEM| NP-V index MASC
 t(32,"oni stari stare vladike su posvadali",@root,0,two-adjectives).%One switch between A-AP index MASC
 t(33,"one stare stari vladike su posvadali",@root,0,two-adjectives).%Two switches
+t(34,"stare one vladike",@root,0,two-adjectives).%Order of determiner and adjective

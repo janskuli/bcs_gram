@@ -19,7 +19,8 @@ bot
           headed_phrase head_dtr:syntactic_object
             binary_headed_phrase non_head_dtr:syntactic_object
               head_argument_phrase
-              head_adjunct_phrase
+              head_non_argument_phrase
+                head_functor_phrase
               head_cluster_phrase
         word reorder:bool
           simple_word
@@ -45,18 +46,16 @@ bot
             nonfin_verb_i_suffix
               ppp_verb_i_suffix
               inf_verb_i_suffix
-    pos mod:list initial:bool pre_modifier:bool lex:bool
+    pos select:list initial:bool pre_modifier:bool lex:bool
       agr_pos agr:agr lex:minus
-        noun mod:e_list initial:plus
+        noun select:e_list initial:plus
           class_2
             class_2_empty
-            class_2_pl
-              class_2_f
-              class_2_m
-                class_2_spr
-        det mod:e_list
+            class_2_f
+            class_2_m
+        det initial:minus 
         adj initial:minus
-      verb mod:e_list vform:vform
+      verb select:e_list vform:vform
       prep initial:plus
     agr %case:case per:per num:num case:case gen:genus
     semantics index:index key:relation rels:list

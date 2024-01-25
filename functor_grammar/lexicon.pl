@@ -10,7 +10,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Nouns
-% concord:mas, index: mas, spr: mas
+% concord:mas, index: mas
 vladika ~~> (word,
   head:(class_2_empty,
     agr:(Agr,
@@ -19,12 +19,8 @@ vladika ~~> (word,
       num:Num
     )
   ),
-  spr:[(
-    head:(det,
-      agr:Agr),
-    sem:index:Ind
-  )],
   subcat:[],
+  marking:minus,
   sem:(
     index:(Ind,
       object,
@@ -41,7 +37,7 @@ vladika ~~> (word,
    )
 ).
 
-%concord: fem, index: fem, spr: fem
+%concord:fem, index:fem
 vladike ~~> (word,
   head:(class_2_f,
     agr:(Agr,
@@ -50,12 +46,8 @@ vladike ~~> (word,
       num:Num
     )
   ),
-  spr:[(
-    head:(det,
-      agr:Agr),
-    sem:index:Ind
-  )],
   subcat:[],
+  marking:minus,
   sem:(
     index:(Ind,
       object,
@@ -72,7 +64,7 @@ vladike ~~> (word,
    )
 ).
 
-% concord: sex, index: mas, spr:concord
+%concord: sex, index: mas
 vladike ~~> (word,
   head:(class_2_m,
     agr:(Agr,
@@ -81,21 +73,17 @@ vladike ~~> (word,
       num:Num
     )
   ),
-  spr:[(
-    head:(det,
-      agr:Agr),
-    sem:index:Ind
-  )],
   subcat:[],
+  marking:minus,
   sem:(
     index:(Ind,
       object,
       per:third,
-      gen:mas,
+      gen:Gen,
       num:(Num,pl)
     ),
     key:(Key,
-      sex:mas,
+      sex:(Gen,mas),
       pred:(a_ vladika_rel),
       arg0:Ind
     ),
@@ -103,54 +91,20 @@ vladike ~~> (word,
    )
 ).
 
-%concord:sex index:masc spr:masc
-vladike ~~> (word,
-  head:(class_2_spr,
-    agr:(
-      case:(Case,nom),
-      gen:fem_mas,
-      num:(Num,pl)
-    )
-  ),
-  spr:[(
-    head:(det,
-      agr:(
-        case:Case,
-        num:Num,
-        gen:Gen)),
-    sem:index:Ind
-  )],
-  subcat:[],
-  sem:(
-    index:(Ind,
-      object,
-      per:third,
-      gen:Gen,
-      num:Num
-    ),
-    key:(Key,
-      sex:(Gen,mas),
-      pred:(a_ vladike_rel),
-      arg0:Ind
-    ),
-    rels:[Key]
-  )
-).
 
 % ADJECTIVES
 %Singular
 stara ~~> (word,
  head:(adj,
    agr:Agr,
-   mod:[(
+   select:[(
      head:(noun,
        agr:(Agr,
          case:nom,
          num:sg,
          gen:fem
        )
-     ),
-     spr:[_]
+     )
    )],
    pre_modifier:plus
  ),
@@ -161,20 +115,20 @@ stara ~~> (word,
      arg0:Ind
    ),
    rels:[Key]),
-  spr:[],
-  subcat:[]
+  subcat:[],
+  marking:minus
 ).
 
-%Plural
+%Plural masculine
 stari ~~>(word,
   head:(adj,
     agr:Agr,
-    mod:[(
+    select:[(
       head:(noun,
         agr:(Agr,
           case:nom,
           gen:mas)),
-      spr:[_]
+      marking:minus
       )],
     pre_modifier:plus
   ),
@@ -186,14 +140,15 @@ stari ~~>(word,
     ),
     rels:[Key]
   ),
-  spr:[],
-  subcat:[]
+  subcat:[],
+  marking:minus
 ).
 
+%Plural feminine
 stare ~~>(word,
   head:(adj,
     agr:Agr,
-    mod:[(
+    select:[(
       head:(noun,
         agr:(Agr,
           case:nom,
@@ -201,8 +156,8 @@ stare ~~>(word,
           gen:fem
         )
       ),
-      spr:[_],
-      sem:index:Ind
+      sem:index:Ind,
+      marking:minus
     )],
     pre_modifier:plus
   ),
@@ -214,17 +169,32 @@ stare ~~>(word,
     ),
     rels:[Key]
   ),
-  spr:[],
-  subcat:[]
+  subcat:[],
+  marking:minus
 ).
 
+%Determiners
+%Plural masculine
 oni ~~> (word,
   head:(det,
     agr:(
-      case:nom,
-      gen:mas,
-      num:pl
-    )
+      case:Case,
+      num:Num,
+      gen:Gen
+    ),
+    select:[(
+      head:(noun,
+        agr:(
+          case:(Case,nom),
+          num:(Num,pl),
+          gen:fem_mas
+        )
+      ),
+      sem:index:(Ind,
+        gen:(Gen,mas)),
+      marking:minus
+    )],
+    pre_modifier:plus
   ),
   sem:(
     index:Ind,
@@ -234,18 +204,27 @@ oni ~~> (word,
     ),
     rels:[Key]
   ),
-  spr:[],
-  subcat:[]
+  subcat:[],
+  marking:plus
 ).
 
+%Plural feminine
 one ~~> (word,
   head:(det,
-    agr:(
-      case:nom,
-      gen:fem,
-      num:pl
-    )
-  ),
+    agr:Agr,
+    select:[(
+      head:(noun,
+        agr:(Agr,
+          case:nom,
+          num:pl,
+          gen:fem
+        )
+      ),
+      sem:index:Ind,
+      marking:minus
+    )],
+    pre_modifier:plus
+    ),
   sem:(
     index:Ind,
     key:(Key,
@@ -254,8 +233,8 @@ one ~~> (word,
     ),
     rels:[Key]
   ),
-  spr:[],
-  subcat:[]
+  subcat:[],
+  marking:plus
 ).
 
 %Verbs
@@ -269,7 +248,6 @@ posvadale ~~> (word,
     sem:index:(Arg1,
             gen:fem,
             num:pl),
-    spr:[],
     subcat:[]
   )],
   sem:(
@@ -280,8 +258,7 @@ posvadale ~~> (word,
       arg1:Arg1
     ),
     rels:[Key]
-  ),
-  spr:[]
+  )
 ).
 
 posvadali ~~> (word,
@@ -294,7 +271,6 @@ posvadali ~~> (word,
     sem:index:(Arg1,
           gen:mas,
           num:pl),
-    spr:[],
     subcat:[]
   )],
   sem:(
@@ -305,8 +281,7 @@ posvadali ~~> (word,
       arg1:Arg1
     ),
     rels:[Key]
-  ),
-  spr:[]
+  )
 ).
 
 su ~~> (word,
@@ -318,6 +293,5 @@ su ~~> (word,
       vform:part
     )
   )],
-  sem:rels:[],
-  spr: []
+  sem:rels:[]
 ).
